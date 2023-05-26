@@ -1,0 +1,58 @@
+.main-message{
+    display: flex;
+}
+.main-message.me{
+    justify-content: end;
+}
+.main-message > .message-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 5px;
+    max-width: 90%;
+    box-shadow: 0 0 0.5rem #0000003f;
+
+}
+.main-message.me > .message-content{
+    background: var(--green);
+    
+}
+.main-message > .message-content > img{
+    max-width: 300px;
+    z-index: 2;
+    border-radius: 5px;
+}
+.main-message > .message-content > span{
+    z-index: 4;
+}
+.main-message > .message-content > .time{
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: end;
+    z-index: 4;
+}
+.main-message:not(.me) > .message-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #FFF transparent transparent;  
+    
+}
+.main-message.me > .message-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: var(--green) transparent transparent;  
+}

@@ -1,0 +1,9 @@
+.main-userinchannel{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    box-shadow: 0 0 0.5rem #0000003f;
+    background: var(--green);
+    color: #fff;
+    border-radius: 5px;
+}
